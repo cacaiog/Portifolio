@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body{
+
+   /*overflow: hidden;*/
+}
+
+
+.container{
+    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+   
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(44, 45, 45);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: rgb(215, 233, 59)
+}
+
+.navItens{
+    display: flex;
+}
+
+.navItens li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItens li a{
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navItens li:hover a,
+.links a:hover{
+    color: rgb(215, 233, 59)
+
+}
+
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 5px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    left: -5%;
+    top: 200px; 
+    background: linear-gradient(45deg, rgb(215, 233, 59), green);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%; 
+    background: linear-gradient(45deg, rgb(215, 233, 59), green);
+    animation: object2 6s linear infinite;
+}
+@keyframes object1 {
+    60%{
+        left: -10%;
+        top: 35%
+    }
+    
+}
+@keyframes object2 {
+    60%{
+        left: 35%;
+        top: 10%
+    }
+    
+}
+
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+
+.cols{
+    width: 50%;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: rgb(215, 233, 59);
+}
+.h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+
+.multiText{
+    font-size: 140%;
+    color: rgb(215, 233, 59);
+    text-transform: capitalize;
+}
+
+.p{
+    display: block;
+    width: 90%;
+    font-family: 1.2em;
+    color: #3d535f;
+
+}
+
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgb(0, 0, 0, 0.4);
+}
+
+button:hover{
+    background-color: rgb(215, 233, 59);
+}
+
+.imgbox{
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+.imgbox img{
+    position: relative;
+    left: 50px;
+    height: 100%;
+    width: calc(130% - 80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+    
+}
+
+@keyframes animateUser {
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}
+
+.imgbox #splash{
+    position: absolute;
+    top: 39px;
+    left: 120px;
+    transform: translate(-20%, -50%) rotate(-35deg);
+    width: 160%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    50%{
+        top: 49px;
+        left: 51px;
+        width: 155%;
+        
+    }
+}
