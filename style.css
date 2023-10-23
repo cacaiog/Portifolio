@@ -213,7 +213,7 @@ button:hover{
 .imgbox img{
     position: relative;
     left: 50px;
-    height: 100%;
+    height: auto;
     width: calc(130% - 80px);
     top: -100px;
     right: 50px;
@@ -246,4 +246,13 @@ button:hover{
         width: 155%;
         
     }
+}
+
+
+@media (max-width: 768px) {
+    /* Estilos para telas menores, por exemplo, smartphones */
+    .cols {
+        flex-direction: column; /* Coluna em vez de linha */
+    }
+    /* Adicione mais estilos para dispositivos móveis conforme necessário */
 }
