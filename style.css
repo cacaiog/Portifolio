@@ -250,9 +250,9 @@ button:hover{
 
 
 @media (max-width: 768px) {
-    /* Estilos para telas menores, por exemplo, smartphones */
+    
     .cols {
-        flex-direction: column; /* Coluna em vez de linha */
+        flex-direction: column; 
     }
-    /* Adicione mais estilos para dispositivos móveis conforme necessário */
+  
 }
