@@ -178,6 +178,10 @@ b{
     color: #3d535f;
 
 }
+.meu-paragrafo {
+    text-align: justify; 
+    text-indent: 1em;   
+}
 
 .btns{
     width: 100%;
