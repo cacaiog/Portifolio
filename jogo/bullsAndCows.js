@@ -111,7 +111,7 @@ const playGame = () => {
 btn.addEventListener('click', playGame); 
 
 input.addEventListener('keyup', (event) => {
-  if (event.key === "Enter") {
+  if (event.key === "Enter" || event.key === "Return") {
     playGame(); 
   }
 });
