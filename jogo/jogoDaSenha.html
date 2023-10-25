@@ -21,32 +21,39 @@
             </ul>
         </nav>
 
+
+
     <h1>Bulls and Cows</h1>
 
-    <div class="random">
-      <h2>JS generated a number <span class="random__value"></span></h2>
-      <input class="random__hide" name="random-radio" type="radio" id="hide" checked>
-      <label for="hide">Hide</label>
-      <input class="random__show" name="random-radio" type="radio" id="show">
-      <label for="show">Show</label>
-    </div>
+
+    <div class="content">
+
+        <div class="random">
+            <h2>JS generated a number <span class="random__value"></span></h2>
+             <input class="random__hide" name="random-radio" type="radio" id="hide" checked>
+            <label for="hide">Hide</label>
+            <input class="random__show" name="random-radio" type="radio" id="show">
+            <label for="show">Show</label>
+         </div>
     
-    <form class="user-number">
-      <h2>Try to guess</h2>
-      <input type="text" id="guessInput" placeholder="Enter your guess" maxlength="4">
-      <button type="button" id="checkButton">OK</button>
-    </form>
+        <form class="user-number">
+         <h2>Try to guess</h2>
+          <input type="text" id="guessInput" placeholder="Enter your guess" maxlength="4">
+          <button type="button" id="checkButton">OK</button>
+         </form>
     
-    <div class="results">
-      <h2>Results</h2>
-      <table class="results__table" border="1">
-        <tr>
-          <td>Number</td>
-          <td>Bulls</td>
-          <td>Cows</td>
-        </tr>
-      </table>
+         <div class="results">
+            <h2>Results</h2>
+             <table class="results__table" border="1">
+              <tr>
+                <td>Number</td>
+              <td>Bulls</td>
+              <td>Cows</td>
+         </tr>
+        </table>
+        </div>
     </div>
+
       <script src="bullsAndCows.js"></script>
 </body>
 </html>
