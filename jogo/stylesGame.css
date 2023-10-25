@@ -35,40 +35,6 @@
 
 
 
-
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-} 
-
-.results {
-  text-align: center;
-  
-}
-.results__table {
-  border: 1px solid black;
-}
-.results__table tr td {
-  padding: 5px;
-}
-
-h1 {
-  text-align: center;
-  
-}
-
-
-
-
-
 .container{
     min-height: 100%;
     width: 100%;
@@ -135,4 +101,20 @@ b{
     color: #3d535f;
     margin: 25px 10px;
 
+}
+
+
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
 }
