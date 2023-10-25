@@ -32,3 +32,68 @@
     animation: shake 0.6s;
   }
   
+
+
+
+  .container{
+    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+   
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(44, 45, 45);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: rgb(215, 233, 59)
+}
+
+.navItens{
+    display: flex;
+}
+
+.navItens li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItens li a{
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navItens li:hover a,
+.links a:hover{
+    color: rgb(215, 233, 59)
+
+}
+
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+
+}
