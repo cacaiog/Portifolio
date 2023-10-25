@@ -96,7 +96,7 @@ let counter = 0;
 btn.addEventListener(`click`, () => {
   counter = ++counter;
 
-  const userStr = userGuessInput.value; // Obtém o valor do campo de entrada
+  const userStr = userGuessInput.value; 
 
   if (userStr.length === NUMBERS_LENGTH && /^[0-9]+$/.test(userStr)) {
     renderTableCells(userStr, 
