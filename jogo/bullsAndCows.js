@@ -1,22 +1,21 @@
-
 const NUMBERS_LENGTH = 4;
 
-const body = document.querySelector(`body`);
+const body = document.querySelector('body');
 
-const randomWrapper = body.querySelector(`.random`);
-const randomField = randomWrapper.querySelector(`.random__value`);
-const hidingRadio = randomWrapper.querySelector(`.random__hide`);
-const showingRadio = randomWrapper.querySelector(`.random__show`);
+const randomWrapper = body.querySelector('.random');
+const randomField = randomWrapper.querySelector('.random__value');
+const hidingRadio = randomWrapper.querySelector('.random__hide');
+const showingRadio = randomWrapper.querySelector('.random__show');
 
-const userGuessInput = document.getElementById('userGuess');
+const userForm = body.querySelector('.user-number');
+const input = userForm.querySelector('input[type="text"]'); 
+const btn = userForm.querySelector('button');
 
-const resultsWrapper = body.querySelector(`.results`);
-const resultsTable = resultsWrapper.querySelector(`.results__table`);
-
-
+const resultsWrapper = body.querySelector('.results');
+const resultsTable = resultsWrapper.querySelector('.results__table');
 
 const getRandomFloating = (min, max) => {
-  return (min - 0.5 + Math.random() * (max - min + 1));
+  return min - 0.5 + Math.random() * (max - min + 1);
 };
 
 const getRandomInteger = (min, max) => {
@@ -36,13 +35,13 @@ const getRandomStringFromNumbers = (length) => {
     const removed = numbers.splice(index, 1);
     goalArr.push(removed);
   }
-  return goalArr.join(``);
-}
+  return goalArr.join('');
+};
 
 const randomNumber = getRandomStringFromNumbers(NUMBERS_LENGTH);
 
 randomField.innerText = randomNumber;
-randomField.classList.add(`visually-hidden`);
+randomField.classList.add('visually-hidden');
 
 const findBulls = (knownNum, guessedNum) => {
   const knownArr = strToArr(knownNum);
@@ -64,7 +63,7 @@ const findCows = (knownNum, guessedNum) => {
   const guessedArr = strToArr(guessedNum);
 
   const matches = [];
-  
+
   for (const guessedItem of guessedArr) {
     for (const knownItem of knownArr) {
       if (guessedItem === knownItem) {
@@ -79,42 +78,45 @@ const findCows = (knownNum, guessedNum) => {
 };
 
 const renderTableCells = (num, bullsNum, cowsNum, counter) => {
-  const newTr = document.createElement(`TR`);
+  const newTr = document.createElement('TR');
   newTr.innerHTML = `
     <td class="result-${counter}">${num}</td>
     <td class="bulls-${counter}">${bullsNum}</td>
     <td class="cows-${counter}">${cowsNum}</td>`;
   resultsTable.appendChild(newTr);
-}
+};
 
-const shakeForm = () => userForm.classList.add(`shake`);
-const normalizeForm = () => userForm.classList.remove(`shake`);
-
+const shakeForm = () => userForm.classList.add('shake');
+const normalizeForm = () => userForm.classList.remove('shake');
 
 let counter = 0;
 
-btn.addEventListener(`click`, () => {
+
+
+btn.addEventListener('click', () => {
   counter = ++counter;
 
-  const userStr = userGuessInput.value; 
+  const userStr = input.value; 
 
-  if (userStr.length === NUMBERS_LENGTH && /^[0-9]+$/.test(userStr)) {
+  if (userStr.length === NUMBERS_LENGTH) {
     renderTableCells(userStr, 
                      findBulls(userStr, randomNumber),
                      findCows(userStr, randomNumber),
                      counter);
+    input.value = ''; 
   } else {
     shakeForm();
     setTimeout(normalizeForm, 1000);
   }
-
 });
 
 
-hidingRadio.addEventListener(`click`, () => {
-  randomField.classList.add(`visually-hidden`);
+
+
+hidingRadio.addEventListener('click', () => {
+  randomField.classList.add('visually-hidden');
 });
 
-showingRadio.addEventListener(`change`, () => {
-  randomField.classList.remove(`visually-hidden`);
+showingRadio.addEventListener('change', () => {
+  randomField.classList.remove('visually-hidden');
 });
