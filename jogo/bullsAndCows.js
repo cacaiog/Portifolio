@@ -91,11 +91,9 @@ const normalizeForm = () => userForm.classList.remove('shake');
 
 let counter = 0;
 
-
-
-btn.addEventListener('click', () => {
+// Função para realizar a lógica do jogo
+const playGame = () => {
   counter = ++counter;
-
   const userStr = input.value; 
 
   if (userStr.length === NUMBERS_LENGTH) {
@@ -108,10 +106,15 @@ btn.addEventListener('click', () => {
     shakeForm();
     setTimeout(normalizeForm, 1000);
   }
+};
+
+btn.addEventListener('click', playGame); 
+
+input.addEventListener('keyup', (event) => {
+  if (event.key === "Enter") {
+    playGame(); 
+  }
 });
-
-
-
 
 hidingRadio.addEventListener('click', () => {
   randomField.classList.add('visually-hidden');
