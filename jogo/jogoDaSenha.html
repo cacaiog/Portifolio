@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
     <title>Bulls and Cows javascript</title>
-    <a href="" class="link"></a>
+
 </head>
 <body>
-    
+    <h1>Bulls and Cows</h1>
+
+    <div class="random">
+        <h2>Gerador de numeros:  <span class="random__value"></span></h2>
+        
+        <input class="random__hide" name="random-radio" type="radio" id="hide" checked>
+        <label for="hide">Hide</label>
+        <input class="random__show" name="random-radio" type="radio" id="show">
+        <label for="show">Show</label>
+      </div>
+      
+      <form class="user-number">
+        <h2>Try to guess</h2>
+        <input type="text" id="userGuess" maxlength="4">
+        <button type="button">ОК</button>
+      </form>
+      
+      <div class="results">
+        <h2>Results</h2>
+        <table class="results__table" border="1">
+          <tr>
+            <td>Number</td>
+            <td>Bulls</td>
+            <td>Cows</td>
+          </tr>
+        </table>
+      </div>
+      <script src="bullsAndCows.js"></script>
 </body>
 </html>
