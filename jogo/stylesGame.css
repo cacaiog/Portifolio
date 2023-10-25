@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap);
+
 .random__value {
     color: red;
   }
@@ -34,28 +36,7 @@
   
 
 
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-
-
-.container{
-    min-height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    background-color: white;
-}
-
-
-.content {
-  text-align: center; 
-}
+ 
 
 nav{
     display: flex;
@@ -113,3 +94,84 @@ b{
 
 }
 
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  margin: 0; 
+  padding: 0; 
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.results__table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.results__table td {
+  padding: 10px;
+}
+
+.content {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 5px);
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+.wrapper::before {
+  position: absolute; 
+  content: '';
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  left: -5%;
+  top: 200px;
+  background: linear-gradient(45deg, rgb(215, 233, 59), green);
+  animation: object1 6s linear infinite;
+}
+
+.wrapper::after {
+  position: absolute; 
+  content: '';
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  left: 35%;
+  top: 12%;
+  background: linear-gradient(45deg, rgb(215, 233, 59), green);
+  animation: object2 6s linear infinite;
+}
+
+@keyframes object1 {
+  60% {
+      left: -10%;
+      top: 35%;
+  }
+}
+
+@keyframes object2 {
+  60% {
+      left: 35%;
+      top: 10%;
+  }
+}
